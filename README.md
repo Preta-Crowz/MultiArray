@@ -15,7 +15,7 @@ It can make your program slower without any advantage on specific environments.
 
 node.js
 ```shell
-npm install multiarray
+npm install multiarr
 ```
 
 deno
@@ -25,7 +25,7 @@ no installation required (it will download from internet)
 
 bun.js
 ```shell
-bun install multiarray
+bun install multiarr
 ```
 
 ## Usage
@@ -37,13 +37,13 @@ import MultiArray from 'https://deno.land/x/multiarray/MultiArray.js';
 
 others
 ```js
-import MultiArray from 'multiarray';
+import MultiArray from 'multiarr';
 ```
 
 ## Example
 
 ```js
-import MultiArray from 'multiarray';
+import MultiArray from 'multiarr';
 let single = [1, 2, 3, 4];
 let square = [1, 4, 9, 16];
 let cubic = [1, 8, 27, 64];
