@@ -1,12 +1,29 @@
 {
   "name": "multiarray",
   "version": "1.0.0",
-  "author": "Preta-Crowz (Koko Ayame)",
+  "author": {
+    "name": "Koko Ayame",
+    "email": "preta@siro.dev",
+    "url": "https://siro.dev/"
+  },
   "main": "MultiArray.js",
   "description": "Allow use multiple arrays as one array without create combined one",
   "license": "MIT",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "homepage": "https://github.com/Preta-Crowz/MultiArray",
+  "bugs": {
+    "url": "https://github.com/Preta-Crowz/MultiArray/issues"
   },
-  "type": "module"
+  "scripts": {
+    "hi": "${process}",
+    "test": "node MAImportTest.js && node MATest.js",
+    "testbun": "bun MAImportTest.js && bun MATest.js"
+  },
+  "type": "module",
+  "keywords": [
+    "array", "pointer"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Preta-Crowz/MultiArray"
+  }
 }
