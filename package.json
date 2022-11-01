@@ -1,0 +1,12 @@
+{
+  "name": "multiarray",
+  "version": "1.0.0",
+  "author": "Preta-Crowz (Koko Ayame)",
+  "main": "MultiArray.js",
+  "description": "Allow use multiple arrays as one array without create combined one",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module"
+}
