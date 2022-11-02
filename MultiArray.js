@@ -105,8 +105,7 @@ export default class MultiArray {
 
     concat (other) {
         if (!MultiArray.isMultiArray(other)) throw TypeError(`Only MultiArray can concat with MultiArray, got ${typeof other}`);
-        this.body = [...this.body, ...other.body];
-        return this.bodyLength;
+        return new MultiArray(...this.body, ...other.body);
     }
 
     toString () {
