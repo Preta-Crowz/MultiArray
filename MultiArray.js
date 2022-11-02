@@ -49,12 +49,10 @@ export default class MultiArray {
 
     append () {
         const args = [...arguments];
-        if (!args.every(Array.isArray)) {
-            for (let idx in args) {
-                if (!Array.isArray(args[idx])) {
-                    let type = typeof args[idx];
-                    throw new TypeError(`Only array can be added : got ${type} on index ${idx}`);
-                }
+        for (let idx in args) {
+            let arr = args[idx];
+            if (!(Array.isArray(arr) || MultiArray.isMultiArray(arr))) {
+                throw new TypeError(`Only array or MultiArray can be added : got ${typeof arr} on index ${idx}`);
             }
         }
         this.body = this.body.concat(args);
@@ -121,7 +119,7 @@ export default class MultiArray {
 
     static checkIndex (index) {
         if (!Number.isInteger(Number(index))) {
-            throw new TypeError(`Index should be Number, got ${typeof index}`);
+            throw new TypeError(`Index should be Integer, got ${typeof index}`);
         }
     }
 
