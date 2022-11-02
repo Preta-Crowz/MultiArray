@@ -105,6 +105,12 @@ export default class MultiArray {
         return -1;
     }
 
+    concat (other) {
+        if (!MultiArray.isMultiArray(other)) throw TypeError(`Only MultiArray can concat with MultiArray, got ${typeof other}`);
+        this.body = [...this.body, ...other.body];
+        return this.bodyLength;
+    }
+
     toString () {
         return `MultiArray[${this.bodyLength}(${this.length})]`
     }
@@ -117,5 +123,9 @@ export default class MultiArray {
         if (!Number.isInteger(Number(index))) {
             throw new TypeError(`Index should be Number, got ${typeof index}`);
         }
+    }
+
+    static isMultiArray (arr) {
+        return arr.constructor === MultiArray;
     }
 }
