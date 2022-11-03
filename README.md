@@ -1,5 +1,8 @@
 # MultiArray
 
+[Deno Document](https://deno.land/x/multiarray/MultiArray.d.ts?doc=&s=MultiArray)
+**Don't trust "import" line on docs! Please read below!**
+
 Allows to use multiple arrays as one array.  
 Use this may reduce "few" memory usage, but access will slower and datas will fragmented.
 
