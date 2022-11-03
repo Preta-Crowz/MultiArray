@@ -116,6 +116,12 @@ export default class MultiArray {
         return this.toString();
     }
 
+    *[Symbol.iterator] () {
+        for (let i=0;i<this.length;i++) {
+            yield this.get(i);
+        }
+    }
+
     static checkIndex (index) {
         if (!Number.isInteger(Number(index))) {
             throw new TypeError(`Index should be Integer, got ${typeof index}`);
