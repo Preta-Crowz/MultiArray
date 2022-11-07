@@ -1,5 +1,7 @@
-export class MultiArray {
-    constructor (...args: Array<any>[])
+type ArrayAny<T> = Array<T> | MultiArray<T>
+
+export default class MultiArray<T> {
+    constructor (...args: ArrayAny<T>[])
 
     /**
      * Get element from MultiArray.
@@ -11,7 +13,7 @@ export class MultiArray {
      * 
      * @returns Returns element that was on index. If not exist, returns nothing.
      */
-    get (index: number): any
+    get (index: number): T
 
     /**
      * Add new body to MultiArray.
@@ -23,7 +25,7 @@ export class MultiArray {
      * 
      * @returns New length of body.
      */
-    append (...args: Array<Array|MultiArray>[]): number
+    append (...args: ArrayAny<T>[]): number
 
     /**
      * Remove body from MultiArray.
@@ -57,7 +59,7 @@ export class MultiArray {
      * 
      * @returns Index of object in MultiArray. If not exist, returns -1.
      */
-    indexOf (obj: any): number
+    indexOf (obj: T): number
 
     /**
      * Found object from MultiArray by filter and returns its index.
@@ -78,7 +80,7 @@ export class MultiArray {
      * 
      * @returns New MultiArray with combined body.
      */
-    concat (other: MultiArray): MultiArray
+    concat (other: MultiArray<T>): MultiArray<T>
 
     toString (): string
 
