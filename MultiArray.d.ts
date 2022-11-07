@@ -85,16 +85,6 @@ export default class MultiArray<T> {
     toString (): string
 
     /**
-     * Check the argument can be used as index.
-     * 
-     * @param index - Index to check.
-     * 
-     * @throws TypeError
-     * Thrown when argument is not integer.
-     */
-    static checkIndex (index: number): void
-
-    /**
      * Check the argument is MultiArray or not.
      * 
      * @param arr - Object to check.
