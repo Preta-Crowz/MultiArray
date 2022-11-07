@@ -37,7 +37,7 @@ export default class MultiArray {
     }
 
     get (index) {
-        MultiArray.checkIndex(index);
+        MultiArray.#checkIndex(index);
         for (let curr of this.body) {
             if (curr.length <= index) {
                 index -= curr.length;
@@ -60,7 +60,7 @@ export default class MultiArray {
     }
 
     remove (index) {
-        MultiArray.checkIndex(index);
+        MultiArray.#checkIndex(index);
         if (this.bodyLength <= index) throw new RangeError(`Body out of range : got ${index}, length is ${this.bodyLength}`);
         this.body.splice(index, 1);
         return this.bodyLength;
@@ -122,7 +122,7 @@ export default class MultiArray {
         }
     }
 
-    static checkIndex (index) {
+    static #checkIndex (index) {
         if (!Number.isInteger(Number(index))) {
             throw new TypeError(`Index should be Integer, got ${typeof index}`);
         }
