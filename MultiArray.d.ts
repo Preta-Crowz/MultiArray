@@ -92,4 +92,6 @@ export default class MultiArray<T> {
     static isMultiArray (arr:any): boolean
 
     [Symbol.iterator](): Generator<T>;
+
+    [K: number]: T;
 }
