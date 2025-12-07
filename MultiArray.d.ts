@@ -90,4 +90,6 @@ export default class MultiArray<T> {
      * @param arr - Object to check.
      */
     static isMultiArray (arr:any): boolean
+
+    [Symbol.iterator](): Generator<T>;
 }
